@@ -1,0 +1,112 @@
+package com.training.agent;
+
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+
+import com.sterlingcommerce.baseutil.SCXmlUtil;
+import com.yantra.interop.japi.YIFApi;
+import com.yantra.interop.japi.YIFClientFactory;
+import com.yantra.ycp.japi.util.YCPBaseAgent;
+import com.yantra.yfc.util.YFCCommon;
+import com.yantra.yfs.japi.YFSConnectionHolder;
+import com.yantra.yfs.japi.YFSEnvironment;
+
+public class CustomPersonInfoPurgeAgent extends YCPBaseAgent{
+
+
+
+	protected static YIFApi api = null;
+	
+	@Override
+	public List<Document> getJobs(YFSEnvironment env, Document inDoc, Document lastMessageCreated) throws Exception {
+
+		List<Document> listDocuments = new ArrayList<Document>();
+
+		String sql = "SELECT * FROM XYZ_PERSON_INFO WHERE SYSTIMESTAMP >= (CREATETS + INTERVAL '1' HOUR) AND ACTIVE='Y'";
+
+		ResultSet rsRecords = fetchRecords(env, sql);
+
+		if (!YFCCommon.isVoid(rsRecords)) {
+
+			while (rsRecords.next()) {
+
+				String personInfoKey = rsRecords.getString(1).trim();
+				System.out.println("Person Info Key: "+ personInfoKey);
+
+				Document inDocToExecuteJob = CreateDocument(personInfoKey);
+
+				listDocuments.add(inDocToExecuteJob);
+
+			}
+
+		}
+
+		return listDocuments;
+
+	}
+
+	private Document CreateDocument(String personInfoKey) {
+
+		Document docChangeOrdInput = SCXmlUtil.createDocument("PersonInfo");
+
+		Element eleChangeOrdRoot = docChangeOrdInput.getDocumentElement();
+
+		eleChangeOrdRoot.setAttribute("PersonInfoKey", personInfoKey);
+
+		eleChangeOrdRoot.setAttribute("Active", "N");
+
+		return docChangeOrdInput;
+
+	}
+
+	private ResultSet fetchRecords(YFSEnvironment env, String strSqlQuery) throws Exception {
+
+		ResultSet resultSet = null;
+
+		Statement statement = null;
+
+		Connection connection = null;
+
+		YFSConnectionHolder context = (YFSConnectionHolder) env;
+
+		connection = context.getDBConnection();
+
+		statement = connection.createStatement();
+
+		// statement.setMaxRows(iNumOfRecordsToBuffer);
+
+		resultSet = statement.executeQuery(strSqlQuery);
+
+		return resultSet;
+
+	}
+
+	@Override
+
+	public void executeJob(YFSEnvironment env, Document inDoc) throws Exception {
+
+		System.out.println("Input to Execute Job:" + SCXmlUtil.getString(inDoc));
+
+		Document personInfoResult = getApi().executeFlow(env, "ChangeActive", inDoc);
+
+		System.out.println("Output of Execute Job:" + SCXmlUtil.getString(personInfoResult));
+
+	}
+
+	protected YIFApi getApi() throws Exception {
+
+		if (api == null) {
+
+			api = YIFClientFactory.getInstance().getLocalApi();
+
+		}
+
+		return api;
+
+	}
+}

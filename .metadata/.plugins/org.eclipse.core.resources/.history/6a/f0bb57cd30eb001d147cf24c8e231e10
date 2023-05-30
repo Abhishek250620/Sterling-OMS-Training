@@ -1,0 +1,45 @@
+package com.training.demo;
+
+import java.io.StringWriter;
+import javax.xml.stream.XMLOutputFactory;
+import javax.xml.stream.XMLStreamException;
+import javax.xml.stream.XMLStreamWriter;
+
+public class Document {
+    public static void main(String[] args) throws XMLStreamException {
+        // create a string writer to write the XML
+        StringWriter stringWriter = new StringWriter();
+        
+        // create an XML stream writer
+        XMLOutputFactory outputFactory = XMLOutputFactory.newFactory();
+        XMLStreamWriter writer = outputFactory.createXMLStreamWriter(stringWriter);
+        
+        // write the XML document
+        writer.writeStartDocument();
+        writer.writeStartElement("employee");
+        
+        // write the employee details
+        writer.writeStartElement("id");
+        writer.writeCharacters("123");
+        writer.writeEndElement();
+        
+        writer.writeStartElement("name");
+        writer.writeCharacters("John Doe");
+        writer.writeEndElement();
+        
+        writer.writeStartElement("email");
+        writer.writeCharacters("john.doe@example.com");
+        writer.writeEndElement();
+        
+        writer.writeStartElement("phone");
+        writer.writeCharacters("123-456-7890");
+        writer.writeEndElement();
+        
+        // end the employee element and the document
+        writer.writeEndElement();
+        writer.writeEndDocument();
+        
+        // print the XML to the console
+        System.out.println(stringWriter.toString());
+    }
+}

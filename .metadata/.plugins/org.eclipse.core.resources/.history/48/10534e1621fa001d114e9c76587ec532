@@ -1,0 +1,79 @@
+package filehandling;
+
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.NodeList;
+import org.xml.sax.SAXException;
+import java.io.File;
+import java.io.IOException;
+
+public class XMLReadingExample {
+    public static void main(String[] args) {
+        String filePath = "D:\\InnovationTool\\Demo.xml";
+        File xmlFile = new File(filePath);
+
+        if (xmlFile.exists()) {
+            try {
+                // Create a DocumentBuilderFactory
+                DocumentBuilderFactory documentBuilderFactory = DocumentBuilderFactory.newInstance();
+
+                // Create a DocumentBuilder
+                DocumentBuilder documentBuilder = documentBuilderFactory.newDocumentBuilder();
+
+                // Parse the XML file
+                Document document = documentBuilder.parse(xmlFile);
+
+                // Get the root element
+                Element rootElement = document.getDocumentElement();
+
+                // Get the number of elements under the root
+                NodeList elements = rootElement.getElementsByTagName("*");
+                int numElements = elements.getLength();
+                System.out.println("Number of elements under Root: " + numElements);
+
+                // Iterate over the elements and print their details
+                for (int i = 0; i < numElements; i++) {
+                    Element element = (Element) elements.item(i);
+                    System.out.println((i + 1) + ": " + element.getTagName() + " - Number of attributes under " + element.getTagName() + " is " + element.getAttributes().getLength());
+
+                    // Recursive function to handle nested elements
+                    processNestedElements(element, 1);
+                }
+            } catch (ParserConfigurationException | SAXException | IOException e) {
+                e.printStackTrace();
+            }
+        } else {
+            System.out.println("XML file does not exist at the specified path: " + filePath);
+        }
+    }
+
+    private static void processNestedElements(Element parentElement, int level) {
+        // Get the child elements under the parent element
+        NodeList childElements = parentElement.getElementsByTagName("*");
+        int numChildElements = childElements.getLength();
+
+        // Print the number of child elements
+        System.out.println(getIndentation(level) + "Number of elements under " + parentElement.getTagName() + ": " + numChildElements);
+
+        // Iterate over the child elements and print their details
+        for (int j = 0; j < numChildElements; j++) {
+            Element childElement = (Element) childElements.item(j);
+            System.out.println(getIndentation(level + 1) + (j + 1) + ": " + childElement.getTagName() + " - Number of attributes under " + childElement.getTagName() + " is " + childElement.getAttributes().getLength());
+
+            // Recursive call for nested elements
+            processNestedElements(childElement, level + 1);
+        }
+    }
+
+    private static String getIndentation(int level) {
+        StringBuilder indentation = new StringBuilder();
+        for (int i = 0; i < level; i++) {
+            indentation.append("   ");
+        }
+        return indentation.toString();
+    }
+}
+
