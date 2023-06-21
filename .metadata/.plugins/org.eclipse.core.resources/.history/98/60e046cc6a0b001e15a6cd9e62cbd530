@@ -1,0 +1,30 @@
+package recursion;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+
+public class Demo {
+	public static void main(String[] args) {
+		String str = "Bin@@@";
+		String[] arr = str.split(" ");
+		String s ="";
+		
+//		System.out.println(Arrays.toString(arr));
+		for(String ele : arr) {
+			boolean flag = true;
+			for(int i=0;i<ele.length();i++) {
+				char ch =ele.charAt(i);
+				if(ch <'a' && ch>'z' && ch<'A' && ch>'Z') {
+					flag=false;
+					System.out.println(ch);
+					break;
+				}
+			}
+			if(flag==true && s.length()<ele.length()) {
+				s=ele;
+			}
+		}
+		System.out.println(s);
+	}
+}

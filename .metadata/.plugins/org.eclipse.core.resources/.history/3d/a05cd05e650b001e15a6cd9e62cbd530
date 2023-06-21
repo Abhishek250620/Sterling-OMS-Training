@@ -1,0 +1,13 @@
+package recursion;
+
+import java.lang.reflect.Array;
+import java.util.Arrays;
+import java.util.TreeSet;
+
+public class Demo {
+	public static void main(String[] args) {
+		String str = "man human Binary";
+		TreeSet<String> treeSet = (TreeSet) Arrays.asList(str.split(" "));
+		System.out.println(treeSet);
+	}
+}

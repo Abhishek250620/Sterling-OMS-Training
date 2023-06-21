@@ -1,0 +1,12 @@
+package recursion;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+
+public class Demo {
+	public static void main(String[] args) {
+		String str = "man human Binary";
+	 ArrayList<String> arrList = new ArrayList<String>(Arrays.asList(str.split(" ")));
+		System.out.println(arrList);
+	}
+}

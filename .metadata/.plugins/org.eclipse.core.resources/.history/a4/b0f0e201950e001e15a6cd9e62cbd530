@@ -1,0 +1,63 @@
+package com.training.ue;
+
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+
+import com.yantra.yfc.log.YFCLogCategory;
+import com.yantra.yfs.japi.YFSEnvironment;
+import com.yantra.yfs.japi.YFSUserExitException;
+import com.yantra.yfs.japi.ue.YFSBeforeCreateOrderUE;
+
+public class CheckItemNumberUE implements YFSBeforeCreateOrderUE {
+
+	   /**
+     * Logger instance
+     */
+    private static YFCLogCategory mLogger = YFCLogCategory
+            .instance(CheckItemNumberUE.class);
+
+    /**
+     * boolean to check whether debug is enabled
+     */
+    private static boolean mIsDebugEnabled;
+    
+    static {
+    	CheckItemNumberUE.mIsDebugEnabled = CheckItemNumberUE.mLogger.isDebugEnabled();
+    }
+    
+    /**
+     * Logs the debug message
+     * 
+     * @param msg
+     */
+    private void debug(String aMsg) {
+        if (CheckItemNumberUE.mIsDebugEnabled) {
+        	CheckItemNumberUE.mLogger.debug(aMsg);
+        }
+    }
+
+
+    @Override
+    public String beforeCreateOrder(YFSEnvironment arg0, String arg1) throws YFSUserExitException {
+        // TODO Auto-generated method stub
+    
+        
+        return null;
+    }
+
+
+
+    @Override
+    public Document beforeCreateOrder(YFSEnvironment arg0, Document aInputDoc) throws YFSUserExitException {
+        // TODO Auto-generated method stub
+        Element eleInbox = aInputDoc.getDocumentElement();
+        String strExceptionType = eleInbox.getAttribute("CustomerPhoneNo");
+        if(strExceptionType.length()!=10)
+        {
+        throw new YFSUserExitException();
+            
+        }
+        return aInputDoc;
+    }
+
+}

@@ -6,6 +6,8 @@
 			<section name="Local Terminal">
 				<item key="encoding" value="UTF-8"/>
 			</section>
+			<section name="Git Bash">
+			</section>
 		</section>
 	</section>
 </section>

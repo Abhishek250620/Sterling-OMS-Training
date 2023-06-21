@@ -1,0 +1,34 @@
+package com.training.ue;
+
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+
+import com.yantra.yfs.japi.YFSEnvironment;
+import com.yantra.yfs.japi.YFSUserExitException;
+import com.yantra.yfs.japi.ue.YFSBeforeCreateOrderUE;
+
+public class CheckItemNumberUE implements YFSBeforeCreateOrderUE {
+
+	@Override
+	public String beforeCreateOrder(YFSEnvironment arg0, String arg1) throws YFSUserExitException {
+		return null;
+	}
+	@Override
+	public Document beforeCreateOrder(YFSEnvironment env, Document inputDoc) throws YFSUserExitException {
+		Element eleOrderLine = (Element) inputDoc.getElementsByTagName("OrderLine").item(0);
+		Element eleItem = (Element) eleOrderLine.getElementsByTagName("Item").item(0);
+		String itemid = eleItem.getAttribute("ItemID");
+
+		if (itemid.isEmpty()) {
+			throw new YFSUserExitException("ItemID is empty");
+		}
+
+		Element rootElement = inputDoc.getDocumentElement();
+		Element extn = inputDoc.createElement("Extn");
+		extn.setAttribute("SubItemId", "V-"+rootElement.getAttribute("ItemID"));
+		extn.setAttribute("CustomerNo", String.valueOf(System.currentTimeMillis()));
+		rootElement.appendChild(extn);
+		return inputDoc;
+	}
+
+}

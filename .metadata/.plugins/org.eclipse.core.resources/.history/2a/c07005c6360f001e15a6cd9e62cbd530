@@ -1,0 +1,69 @@
+package com.trainings.api;
+
+import java.util.Properties;
+
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.NodeList;
+
+import com.yantra.interop.japi.YIFApi;
+import com.yantra.interop.japi.YIFClientFactory;
+import com.yantra.interop.japi.YIFCustomApi;
+import com.yantra.yfs.japi.YFSEnvironment;
+
+public class AddValueToOrderHeader implements YIFCustomApi{
+
+	@Override
+	public void setProperties(Properties arg0) throws Exception {
+		
+	}
+	
+	
+	
+	public static Document invokeAPI(YFSEnvironment env, String templateName, Document inDoc)
+			throws Exception {
+		YIFApi api = YIFClientFactory.getInstance().getApi();
+		if (templateName != null)
+			env.setApiTemplate("ChangeOrder", templateName);
+		Document outDoc = api.invoke(env, "ChangeOrder", inDoc);
+		env.clearApiTemplate("ChangeOrder");
+		return outDoc;
+	}
+	
+	public static Document generateOutputDocument(String inputDocument, YFSEnvironment env) throws Exception {
+        DocumentBuilderFactory docBuilderFactory = DocumentBuilderFactory.newInstance();
+        DocumentBuilder docBuilder = docBuilderFactory.newDocumentBuilder();
+        Document inputXmlDoc = docBuilder.parse(inputDocument);
+
+        Element rootElement = inputXmlDoc.getDocumentElement();
+
+        Document outputXmlDoc = docBuilder.newDocument();
+        
+        NodeList itemNodes = inputXmlDoc.getElementsByTagName("Item");
+
+        String itemID="";
+        for (int i = 0; i < itemNodes.getLength(); i++) {
+            Element itemElement = (Element) itemNodes.item(i);
+            itemID = itemElement.getAttribute("ItemID");
+            itemElement.setAttribute("SubItemID", itemID);
+        }
+
+        Element outputRootElement = outputXmlDoc.createElement("Order");
+        outputRootElement.setAttribute("Action", "MODIFY");
+        outputRootElement.setAttribute("DocumentType", rootElement.getAttribute("DocumentType"));
+        outputRootElement.setAttribute("EnterpriseCode", rootElement.getAttribute("EnterpriseCode"));
+        outputRootElement.setAttribute("OrderNo", rootElement.getAttribute("OrderNo"));
+        outputXmlDoc.appendChild(outputRootElement);
+
+        Element extnElement = outputXmlDoc.createElement("Extn");
+        extnElement.setAttribute("SubItemId", "V-"+itemID);
+        extnElement.setAttribute("CustomerNo", String.valueOf(System.currentTimeMillis()));
+        outputRootElement.appendChild(extnElement);
+
+        return outputXmlDoc;
+    }
+
+}
