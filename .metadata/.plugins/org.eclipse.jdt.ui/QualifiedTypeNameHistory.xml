@@ -19,4 +19,5 @@
     <fullyQualifiedTypeName name="org.w3c.dom.Document"/>
     <fullyQualifiedTypeName name="org.w3c.dom.Node"/>
     <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="com.yantra.yfs.japi.YFSEnvironment"/>
 </qualifiedTypeNameHistroy>

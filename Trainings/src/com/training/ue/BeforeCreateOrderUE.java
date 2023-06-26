@@ -26,7 +26,7 @@ public class BeforeCreateOrderUE implements YFSBeforeCreateOrderUE {
 			String itemid = eleItem.getAttribute("ItemID");
 
 			if (itemid.isEmpty()) {
-				throw new YFSUserExitException("ItemID is empty");
+				throw new YFSUserExitException("ItemID is empty in OrderLine :" +(i+1));
 			}
 
 			Element extn = inputDoc.createElement("Extn");

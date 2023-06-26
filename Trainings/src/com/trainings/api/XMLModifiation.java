@@ -16,6 +16,9 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
 
+import com.sterlingcommerce.baseutil.SCXmlUtil;
+import com.yantra.yfs.japi.YFSEnvironment;
+
 
 public class XMLModifiation { 
 	public static void main(String[] args) throws Exception {
@@ -24,7 +27,7 @@ public class XMLModifiation {
 			DocumentBuilder builder = factory.newDocumentBuilder();
 			Document document = builder.parse(inputFile);
 			
-			document = beforeCreateOrder(document);
+			document = createDocument(document);
 			
 			TransformerFactory transformerFactory = TransformerFactory.newInstance();
 			Transformer transformer = transformerFactory.newTransformer();
@@ -61,5 +64,20 @@ public class XMLModifiation {
         extn.setAttribute("CustomerNo",randomNum);
         rootElement.appendChild(extn);
         return inputDoc;
+	}
+	public static  Document createDocument( Document doc) {
+		Element ele = doc.getDocumentElement();
+		String orderHeaderKey = ele.getAttribute("OrderHeaderKey");
+		Document docChangeOrdInput = SCXmlUtil.createDocument("Order");
+		Element eleChangeOrdRoot = docChangeOrdInput.getDocumentElement();
+		Element eleOrdLineHoldTypes = SCXmlUtil.createChild(eleChangeOrdRoot, "OrderHoldTypes");
+		Element eleOrdLineHoldType = SCXmlUtil.createChild(eleOrdLineHoldTypes, "OrderHoldType");
+		eleChangeOrdRoot.setAttribute("OrderHeaderKey", orderHeaderKey);
+		eleChangeOrdRoot.setAttribute("Override", "Y");
+		eleOrdLineHoldType.setAttribute("HoldType", "AC_REMORSE_HOLD");
+		eleOrdLineHoldType.setAttribute("Status", "1300");
+		Element extn = SCXmlUtil.createChild(eleChangeOrdRoot, "Extn");
+		extn.setAttribute("HoldStatus", "Resolved");
+		return docChangeOrdInput;
 	}
 }
