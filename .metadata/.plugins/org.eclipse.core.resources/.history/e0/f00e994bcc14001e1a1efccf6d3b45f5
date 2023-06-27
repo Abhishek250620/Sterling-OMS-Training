@@ -1,0 +1,21 @@
+package com.DSA.logivalproblems;
+
+public class DeciToBin {
+	
+	public static Long decToBin(int deci) {
+		Long bin =0l;
+		int place = 1;
+		while(deci>0) {
+			int res = deci % 2;
+			bin = bin+(deci % 2) * place;
+			place *= 10;
+			deci/=2;
+		}
+		return bin;
+	}
+
+	public static void main(String[] args) {
+		System.out.println(0*10);
+		System.out.println(decToBin(4));
+	}
+}
