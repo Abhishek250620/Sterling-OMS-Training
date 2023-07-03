@@ -1,0 +1,20 @@
+package com.training.ue;
+
+import org.w3c.dom.Document;
+
+import com.sterlingcommerce.baseutil.SCXmlUtil;
+import com.yantra.ydm.japi.ue.YDMBeforeCreateShipment;
+import com.yantra.yfc.junit.SCITestXMLUtil;
+import com.yantra.yfs.japi.YFSEnvironment;
+import com.yantra.yfs.japi.YFSUserExitException;
+
+public class BeforeCreateShipment implements YDMBeforeCreateShipment {
+
+	@Override
+	public Document beforeCreateShipment(YFSEnvironment arg0, Document arg1) throws YFSUserExitException {
+		Document doc = SCXmlUtil.createDocument("Shipment");
+		
+		return null;
+	}
+
+}

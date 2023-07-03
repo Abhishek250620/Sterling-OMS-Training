@@ -7,6 +7,7 @@ import org.w3c.dom.Element;
 
 import com.sterlingcommerce.baseutil.SCXmlUtil;
 import com.yantra.interop.japi.YIFCustomApi;
+import com.yantra.yfc.dom.YFCDocument;
 import com.yantra.yfc.log.YFCLogCategory;
 import com.yantra.yfs.japi.YFSEnvironment;
 
@@ -17,15 +18,17 @@ public class ResolveACRemorseHold implements YIFCustomApi {
 	/**
 	 * Logger instance
 	 */
-	private static YFCLogCategory mLogger = YFCLogCategory.instance(TNGCustomAPI.class);
+	private static YFCLogCategory mLogger = YFCLogCategory.instance(ResolveACRemorseHold.class);
 	
 
 	/**
 	 * boolean to check whether debug is enabled
 	 */
 	private static boolean mIsDebugEnabled;
+
 	
-	public static  Document createDocument(YFSEnvironment env, Document doc) {
+	public  Document createDocument(YFSEnvironment env, Document doc) {
+		this.debug("ResolveACRemorseHold : " + YFCDocument.getDocumentFor(doc));
 		Element ele = doc.getDocumentElement();
 		String orderHeaderKey = ele.getAttribute("OrderHeaderKey");
 		Document docChangeOrdInput = SCXmlUtil.createDocument("Order");
@@ -38,6 +41,7 @@ public class ResolveACRemorseHold implements YIFCustomApi {
 		eleOrdLineHoldType.setAttribute("Status", "1300");
 		Element extn = SCXmlUtil.createChild(eleChangeOrdRoot, "Extn");
 		extn.setAttribute("HoldStatus", "Resolved");
+		System.out.println("Input for ChangeOrder:" + SCXmlUtil.getString(docChangeOrdInput));
 		return docChangeOrdInput;
 	}
 	
@@ -72,5 +76,6 @@ public class ResolveACRemorseHold implements YIFCustomApi {
 			ResolveACRemorseHold.mLogger.debug(aMsg);
 		}
 	}
+
 
 }
