@@ -2,7 +2,7 @@ package recursion;
 
 import java.util.Arrays;
 
-public class BubbleSort {
+public class BubbleSort {		// Using recursion 
 	static void bubbleSort(int[] arr, int row, int col) {
 		if(row==0) {
 			return;
