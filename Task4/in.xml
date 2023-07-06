@@ -1,0 +1,497 @@
+<PropertyMetadataList>
+	<PropertyMetadata BasePropertyName="yfs.sgt.orderstatus.internal.q" Category="yfs" Description="Order Status Internal Queue" JvmType="APPSERVER" Modifiable="Y" ModifiableAtRuntime="Y" PropertyType="CUSTOM" Scope="GLOBAL" ServerOverride="N" UserOverride="N">
+		<PropertyList>
+			<Property BasePropertyName="yfs.sgt.orderstatus.internal.q" Category="yfs" PropertyOverride="BASE" PropertyOverrideName="" PropertyValue="Q.OMS.ORDERSTATUS.INTERNAL"/>
+		</PropertyList>
+	</PropertyMetadata>
+	<PropertyMetadata BasePropertyName="yfs.qcf" Category="yfs" Description="Provide QueueConnectionFactory Name" JvmType="APPSERVER" Modifiable="Y" ModifiableAtRuntime="Y" PropertyType="CUSTOM" Scope="GLOBAL" ServerOverride="N" UserOverride="N">
+		<PropertyList>
+			<Property BasePropertyName="yfs.qcf" Category="yfs" PropertyOverride="BASE" PropertyOverrideName="" PropertyValue="AGENT_QCF"/>
+		</PropertyList>
+	</PropertyMetadata>
+	<PropertyMetadata BasePropertyName="yfs.providerurl" Category="yfs" Description="Set ProviderURL Name" JvmType="APPSERVER" Modifiable="Y" ModifiableAtRuntime="Y" PropertyType="CUSTOM" Scope="GLOBAL" ServerOverride="N" UserOverride="N">
+		<PropertyList>
+			<Property BasePropertyName="yfs.providerurl" Category="yfs" PropertyOverride="BASE" PropertyOverrideName="" PropertyValue="file:/opt/ssfs/jndi"/>
+		</PropertyList>
+	</PropertyMetadata>
+	<PropertyMetadata BasePropertyName="IV_URL" Category="yfs" Description="IV_URL" JvmType="APPSERVER" Modifiable="Y" ModifiableAtRuntime="Y" PropertyType="CUSTOM" Scope="GLOBAL" ServerOverride="N" UserOverride="N">
+		<PropertyList>
+			<Property BasePropertyName="IV_URL" Category="yfs" PropertyOverride="BASE" PropertyOverrideName="" PropertyValue="https://api.watsoncommerce.ibm.com/inventory/us-e5db9aee/v1"/>
+		</PropertyList>
+	</PropertyMetadata>
+	<PropertyMetadata BasePropertyName="CLIENT_ID" Category="yfs" Description="CLIENT_ID" JvmType="APPSERVER" Modifiable="Y" ModifiableAtRuntime="Y" PropertyType="CUSTOM" Scope="GLOBAL" ServerOverride="N" UserOverride="N">
+		<PropertyList>
+			<Property BasePropertyName="CLIENT_ID" Category="yfs" PropertyOverride="BASE" PropertyOverrideName="" PropertyValue="PqSK0D9RUJEghjDl3uegfsubs6bHOpRZ"/>
+		</PropertyList>
+	</PropertyMetadata>
+	<PropertyMetadata BasePropertyName="CLIENT_SECRET" Category="yfs" Description="CLIENT_SECRET" JvmType="APPSERVER" Modifiable="Y" ModifiableAtRuntime="Y" PropertyType="CUSTOM" Scope="GLOBAL" ServerOverride="N" UserOverride="N">
+		<PropertyList>
+			<Property BasePropertyName="CLIENT_SECRET" Category="yfs" PropertyOverride="BASE" PropertyOverrideName="" PropertyValue="qLN0jHTtv2JJa7tv5Hgqoua1jFjGfE8z"/>
+		</PropertyList>
+	</PropertyMetadata>
+	<PropertyMetadata BasePropertyName="TENANT_ID" Category="yfs" Description="TENANT_ID" JvmType="APPSERVER" Modifiable="Y" ModifiableAtRuntime="Y" PropertyType="CUSTOM" Scope="GLOBAL" ServerOverride="N" UserOverride="N">
+		<PropertyList>
+			<Property BasePropertyName="TENANT_ID" Category="yfs" PropertyOverride="BASE" PropertyOverrideName="" PropertyValue="us-e5db9aee"/>
+		</PropertyList>
+	</PropertyMetadata>
+	<PropertyMetadata BasePropertyName="yfs.sgt.transferlayawayno.internal.q" Category="yfs" Description="yfs.sgt.transferlayawayno.internal.q" JvmType="APPSERVER" Modifiable="Y" ModifiableAtRuntime="Y" PropertyType="CUSTOM" Scope="GLOBAL" ServerOverride="N" UserOverride="N">
+		<PropertyList>
+			<Property BasePropertyName="yfs.sgt.transferlayawayno.internal.q" Category="yfs" PropertyOverride="BASE" PropertyOverrideName="" PropertyValue="Q.OMS.TRANSFERLAYAWAYNO.INTERNAL"/>
+		</PropertyList>
+	</PropertyMetadata>
+	<PropertyMetadata BasePropertyName="yfs.create.order.hybris.q" Category="yfs" Description="Create Order Queue" JvmType="APPSERVER" Modifiable="Y" ModifiableAtRuntime="Y" PropertyType="CUSTOM" Scope="GLOBAL" ServerOverride="N" UserOverride="N">
+		<PropertyList>
+			<Property BasePropertyName="yfs.create.order.hybris.q" Category="yfs" PropertyOverride="BASE" PropertyOverrideName="" PropertyValue="Q.OMS.ORD.CREATE.HYBRIS.IN"/>
+		</PropertyList>
+	</PropertyMetadata>
+	<PropertyMetadata BasePropertyName="yfs.productfeed.hybris.q" Category="yfs" Description="Item Feed Queue" JvmType="APPSERVER" Modifiable="Y" ModifiableAtRuntime="Y" PropertyType="CUSTOM" Scope="GLOBAL" ServerOverride="N" UserOverride="N">
+		<PropertyList>
+			<Property BasePropertyName="yfs.productfeed.hybris.q" Category="yfs" PropertyOverride="BASE" PropertyOverrideName="" PropertyValue="Q.OMS.PRDTFEED.PIM.IN"/>
+		</PropertyList>
+	</PropertyMetadata>
+	<PropertyMetadata BasePropertyName="yfs.cancel.order.hybris.q" Category="yfs" Description="Cancel Order Queue" JvmType="APPSERVER" Modifiable="Y" ModifiableAtRuntime="Y" PropertyType="CUSTOM" Scope="GLOBAL" ServerOverride="N" UserOverride="N">
+		<PropertyList>
+			<Property BasePropertyName="yfs.cancel.order.hybris.q" Category="yfs" PropertyOverride="BASE" PropertyOverrideName="" PropertyValue="Q.OMS.ORD.CANCEL.HYBRIS.IN"/>
+		</PropertyList>
+	</PropertyMetadata>
+	<PropertyMetadata BasePropertyName="yfs.resolvehold.order.hybris.q" Category="yfs" Description="Resolve Hold Queue" JvmType="APPSERVER" Modifiable="Y" ModifiableAtRuntime="Y" PropertyType="CUSTOM" Scope="GLOBAL" ServerOverride="N" UserOverride="N">
+		<PropertyList>
+			<Property BasePropertyName="yfs.resolvehold.order.hybris.q" Category="yfs" PropertyOverride="BASE" PropertyOverrideName="" PropertyValue="Q.OMS.ORD.RESOLVE.HOLD.HYBRIS.IN"/>
+		</PropertyList>
+	</PropertyMetadata>
+	<PropertyMetadata BasePropertyName="yfs.sgt.agent.export.purge.q" Category="yfs" Description="Queue for Export Purge" JvmType="APPSERVER" Modifiable="Y" ModifiableAtRuntime="Y" PropertyType="CUSTOM" Scope="GLOBAL" ServerOverride="N" UserOverride="N">
+		<PropertyList>
+			<Property BasePropertyName="yfs.sgt.agent.export.purge.q" Category="yfs" PropertyOverride="BASE" PropertyOverrideName="" PropertyValue="Q.OMS.EXPORT.PURGE"/>
+		</PropertyList>
+	</PropertyMetadata>
+	<PropertyMetadata BasePropertyName="yfs.sgt.logo.zalesoutlet" Category="yfs" Description="Zales outlet logo" JvmType="APPSERVER" Modifiable="Y" ModifiableAtRuntime="Y" PropertyType="CUSTOM" Scope="GLOBAL" ServerOverride="N" UserOverride="N">
+		<PropertyList>
+			<Property BasePropertyName="yfs.sgt.logo.zalesoutlet" Category="yfs" PropertyOverride="BASE" PropertyOverrideName="" PropertyValue="https://madassets-prod.s3.amazonaws.com/associate/shared/client_specific/signet/zales_out_logo.png"/>
+		</PropertyList>
+	</PropertyMetadata>
+	<PropertyMetadata BasePropertyName="yfs.sgt.logo.zales.width" Category="yfs" Description="Zales logo width" JvmType="APPSERVER" Modifiable="Y" ModifiableAtRuntime="Y" PropertyType="CUSTOM" Scope="GLOBAL" ServerOverride="N" UserOverride="N">
+		<PropertyList>
+			<Property BasePropertyName="yfs.sgt.logo.zales.width" Category="yfs" PropertyOverride="BASE" PropertyOverrideName="" PropertyValue="150"/>
+		</PropertyList>
+	</PropertyMetadata>
+	<PropertyMetadata BasePropertyName="yfs.sgt.logo.zales.height" Category="yfs" Description="Zales logo height" JvmType="APPSERVER" Modifiable="Y" ModifiableAtRuntime="Y" PropertyType="CUSTOM" Scope="GLOBAL" ServerOverride="N" UserOverride="N">
+		<PropertyList>
+			<Property BasePropertyName="yfs.sgt.logo.zales.height" Category="yfs" PropertyOverride="BASE" PropertyOverrideName="" PropertyValue="70"/>
+		</PropertyList>
+	</PropertyMetadata>
+	<PropertyMetadata BasePropertyName="yfs.sgt.logo.zales" Category="yfs" Description="Zales logo" JvmType="APPSERVER" Modifiable="Y" ModifiableAtRuntime="Y" PropertyType="CUSTOM" Scope="GLOBAL" ServerOverride="N" UserOverride="N">
+		<PropertyList>
+			<Property BasePropertyName="yfs.sgt.logo.zales" Category="yfs" PropertyOverride="BASE" PropertyOverrideName="" PropertyValue="https://madassets-prod.s3.amazonaws.com/associate/shared/client_specific/signet/zales_logo.png" UserComment="MadMobile URL"/>
+		</PropertyList>
+	</PropertyMetadata>
+	<PropertyMetadata BasePropertyName="yfs.sgt.logo.pagoda" Category="yfs" Description="Pagoda logo" JvmType="APPSERVER" Modifiable="Y" ModifiableAtRuntime="Y" PropertyType="CUSTOM" Scope="GLOBAL" ServerOverride="N" UserOverride="N">
+		<PropertyList>
+			<Property BasePropertyName="yfs.sgt.logo.pagoda" Category="yfs" PropertyOverride="BASE" PropertyOverrideName="" PropertyValue="https://madassets-prod.s3.amazonaws.com/associate/shared/client_specific/signet/pagoda_logo.png"/>
+		</PropertyList>
+	</PropertyMetadata>
+	<PropertyMetadata BasePropertyName="yfs.sgt.logo.kayoutlet" Category="yfs" Description="Kay Outlet logo" JvmType="APPSERVER" Modifiable="Y" ModifiableAtRuntime="Y" PropertyType="CUSTOM" Scope="GLOBAL" ServerOverride="N" UserOverride="N">
+		<PropertyList>
+			<Property BasePropertyName="yfs.sgt.logo.kayoutlet" Category="yfs" PropertyOverride="BASE" PropertyOverrideName="" PropertyValue="https://madassets-prod.s3.amazonaws.com/associate/shared/client_specific/signet/kay_outlet_logo.png"/>
+		</PropertyList>
+	</PropertyMetadata>
+	<PropertyMetadata BasePropertyName="yfs.sgt.logo.kay.width" Category="yfs" Description="Kay logo width" JvmType="APPSERVER" Modifiable="Y" ModifiableAtRuntime="Y" PropertyType="CUSTOM" Scope="GLOBAL" ServerOverride="N" UserOverride="N">
+		<PropertyList>
+			<Property BasePropertyName="yfs.sgt.logo.kay.width" Category="yfs" PropertyOverride="BASE" PropertyOverrideName="" PropertyValue="100"/>
+		</PropertyList>
+	</PropertyMetadata>
+	<PropertyMetadata BasePropertyName="yfs.sgt.logo.kay" Category="yfs" Description="Kay logo" JvmType="APPSERVER" Modifiable="Y" ModifiableAtRuntime="Y" PropertyType="CUSTOM" Scope="GLOBAL" ServerOverride="N" UserOverride="N">
+		<PropertyList>
+			<Property BasePropertyName="yfs.sgt.logo.kay" Category="yfs" PropertyOverride="BASE" PropertyOverrideName="" PropertyValue="https://madassets-prod.s3.amazonaws.com/associate/shared/client_specific/signet/kay_logo.png"/>
+		</PropertyList>
+	</PropertyMetadata>
+	<PropertyMetadata BasePropertyName="yfs.sgt.logo.kay.height" Category="yfs" Description="Kay logo height" JvmType="APPSERVER" Modifiable="Y" ModifiableAtRuntime="Y" PropertyType="CUSTOM" Scope="GLOBAL" ServerOverride="N" UserOverride="N">
+		<PropertyList>
+			<Property BasePropertyName="yfs.sgt.logo.kay.height" Category="yfs" PropertyOverride="BASE" PropertyOverrideName="" PropertyValue="70"/>
+		</PropertyList>
+	</PropertyMetadata>
+	<PropertyMetadata BasePropertyName="yfs.sgt.logo.jared" Category="yfs" Description="Jared logo" JvmType="APPSERVER" Modifiable="Y" ModifiableAtRuntime="Y" PropertyType="CUSTOM" Scope="GLOBAL" ServerOverride="N" UserOverride="N">
+		<PropertyList>
+			<Property BasePropertyName="yfs.sgt.logo.jared" Category="yfs" PropertyOverride="BASE" PropertyOverrideName="" PropertyValue="https://madassets-prod.s3.amazonaws.com/associate/shared/client_specific/signet/jared_logo.png"/>
+		</PropertyList>
+	</PropertyMetadata>
+	<PropertyMetadata BasePropertyName="yfs.sgt.logo.jared.height" Category="yfs" Description="Jared logo height" JvmType="APPSERVER" Modifiable="Y" ModifiableAtRuntime="Y" PropertyType="CUSTOM" Scope="GLOBAL" ServerOverride="N" UserOverride="N">
+		<PropertyList>
+			<Property BasePropertyName="yfs.sgt.logo.jared.height" Category="yfs" PropertyOverride="BASE" PropertyOverrideName="" PropertyValue="60"/>
+		</PropertyList>
+	</PropertyMetadata>
+	<PropertyMetadata BasePropertyName="yfs.sgt.logo.jared.width" Category="yfs" Description="Jared logo width" JvmType="APPSERVER" Modifiable="Y" ModifiableAtRuntime="Y" PropertyType="CUSTOM" Scope="GLOBAL" ServerOverride="N" UserOverride="N">
+		<PropertyList>
+			<Property BasePropertyName="yfs.sgt.logo.jared.width" Category="yfs" PropertyOverride="BASE" PropertyOverrideName="" PropertyValue="130"/>
+		</PropertyList>
+	</PropertyMetadata>
+	<PropertyMetadata BasePropertyName="yfs.sgt.logo.arrow" Category="yfs" Description="Arrow image" JvmType="APPSERVER" Modifiable="Y" ModifiableAtRuntime="Y" PropertyType="CUSTOM" Scope="GLOBAL" ServerOverride="N" UserOverride="N">
+		<PropertyList>
+			<Property BasePropertyName="yfs.sgt.logo.arrow" Category="yfs" PropertyOverride="BASE" PropertyOverrideName="" PropertyValue="https://madassets-prod.s3.amazonaws.com/associate/shared/client_specific/signet/arrow.png"/>
+		</PropertyList>
+	</PropertyMetadata>
+	<PropertyMetadata BasePropertyName="yfs.sgt.logo.arrow.height" Category="yfs" Description="Arrow Image height" JvmType="APPSERVER" Modifiable="Y" ModifiableAtRuntime="Y" PropertyType="CUSTOM" Scope="GLOBAL" ServerOverride="N" UserOverride="N">
+		<PropertyList>
+			<Property BasePropertyName="yfs.sgt.logo.arrow.height" Category="yfs" PropertyOverride="BASE" PropertyOverrideName="" PropertyValue="40"/>
+		</PropertyList>
+	</PropertyMetadata>
+	<PropertyMetadata BasePropertyName="yfs.sgt.logo.arrow.width" Category="yfs" Description="Arrow image width" JvmType="APPSERVER" Modifiable="Y" ModifiableAtRuntime="Y" PropertyType="CUSTOM" Scope="GLOBAL" ServerOverride="N" UserOverride="N">
+		<PropertyList>
+			<Property BasePropertyName="yfs.sgt.logo.arrow.width" Category="yfs" PropertyOverride="BASE" PropertyOverrideName="" PropertyValue="70"/>
+		</PropertyList>
+	</PropertyMetadata>
+	<PropertyMetadata BasePropertyName="IAM_ENDPOINT" Category="yfs" Description="IAM_ENDPOINT" JvmType="APPSERVER" Modifiable="Y" ModifiableAtRuntime="Y" PropertyType="CUSTOM" Scope="GLOBAL" ServerOverride="N" UserOverride="N">
+		<PropertyList>
+			<Property BasePropertyName="IAM_ENDPOINT" Category="yfs" PropertyOverride="BASE" PropertyOverrideName="" PropertyValue="https://iam.cloud.ibm.com/identity/token"/>
+		</PropertyList>
+	</PropertyMetadata>
+	<PropertyMetadata BasePropertyName="NODE_AVAILABILITY_BUCKET_NAME" Category="yfs" Description="NODE_AVAILABILITY_BUCKET_NAME" JvmType="APPSERVER" Modifiable="Y" ModifiableAtRuntime="Y" PropertyType="CUSTOM" Scope="GLOBAL" ServerOverride="N" UserOverride="N">
+		<PropertyList>
+			<Property BasePropertyName="NODE_AVAILABILITY_BUCKET_NAME" Category="yfs" PropertyOverride="BASE" PropertyOverrideName="" PropertyValue="signet-na-dev-node-availability"/>
+		</PropertyList>
+	</PropertyMetadata>
+	<PropertyMetadata BasePropertyName="NODE_AVAILABILITY_ERR_API_KEY" Category="yfs" Description="NODE_AVAILABILITY_ERR_API_KEY" JvmType="APPSERVER" Modifiable="Y" ModifiableAtRuntime="Y" PropertyType="CUSTOM" Scope="GLOBAL" ServerOverride="N" UserOverride="N">
+		<PropertyList>
+			<Property BasePropertyName="NODE_AVAILABILITY_ERR_API_KEY" Category="yfs" PropertyOverride="BASE" PropertyOverrideName="" PropertyValue="NhnGVRNhB6ThdKza4QrqvPGJxtGWmtuECU-Z8EJO635N"/>
+		</PropertyList>
+	</PropertyMetadata>
+	<PropertyMetadata BasePropertyName="NODE_AVAILABILITY_ERR_BUCKET_NAME" Category="yfs" Description="NODE_AVAILABILITY_ERR_BUCKET_NAME" JvmType="APPSERVER" Modifiable="Y" ModifiableAtRuntime="Y" PropertyType="CUSTOM" Scope="GLOBAL" ServerOverride="N" UserOverride="N">
+		<PropertyList>
+			<Property BasePropertyName="NODE_AVAILABILITY_ERR_BUCKET_NAME" Category="yfs" PropertyOverride="BASE" PropertyOverrideName="" PropertyValue="signet-na-dev-node-availability-err"/>
+		</PropertyList>
+	</PropertyMetadata>
+	<PropertyMetadata BasePropertyName="NODE_AVAILABILITY_DONE_API_KEY" Category="yfs" Description="NODE_AVAILABILITY_DONE_API_KEY" JvmType="APPSERVER" Modifiable="Y" ModifiableAtRuntime="Y" PropertyType="CUSTOM" Scope="GLOBAL" ServerOverride="N" UserOverride="N">
+		<PropertyList>
+			<Property BasePropertyName="NODE_AVAILABILITY_DONE_API_KEY" Category="yfs" PropertyOverride="BASE" PropertyOverrideName="" PropertyValue="UNVKJAQxUkVB6bMZI2dZIzSfCJeu2RfIaEifAOSxWb0Z"/>
+		</PropertyList>
+	</PropertyMetadata>
+	<PropertyMetadata BasePropertyName="NODE_AVAILABILITY_DONE_BUCKET_NAME" Category="yfs" Description="signet-na-dev-node-availability-done" JvmType="APPSERVER" Modifiable="Y" ModifiableAtRuntime="Y" PropertyType="CUSTOM" Scope="GLOBAL" ServerOverride="N" UserOverride="N">
+		<PropertyList>
+			<Property BasePropertyName="NODE_AVAILABILITY_DONE_BUCKET_NAME" Category="yfs" PropertyOverride="BASE" PropertyOverrideName="" PropertyValue="signet-na-dev-node-availability-done"/>
+		</PropertyList>
+	</PropertyMetadata>
+	<PropertyMetadata BasePropertyName="NODE_AVAILABILITY_WIP_API_KEY" Category="yfs" Description="NODE_AVAILABILITY_WIP_API_KEY" JvmType="APPSERVER" Modifiable="Y" ModifiableAtRuntime="Y" PropertyType="CUSTOM" Scope="GLOBAL" ServerOverride="N" UserOverride="N">
+		<PropertyList>
+			<Property BasePropertyName="NODE_AVAILABILITY_WIP_API_KEY" Category="yfs" PropertyOverride="BASE" PropertyOverrideName="" PropertyValue="11YuWMEJPWgoFI7ES6aYLdMAs-S6M_AkM3lRIwQEv4IC"/>
+		</PropertyList>
+	</PropertyMetadata>
+	<PropertyMetadata BasePropertyName="COS_LOCATION" Category="yfs" Description="COS_LOCATION" JvmType="APPSERVER" Modifiable="Y" ModifiableAtRuntime="Y" PropertyType="CUSTOM" Scope="GLOBAL" ServerOverride="N" UserOverride="N">
+		<PropertyList>
+			<Property BasePropertyName="COS_LOCATION" Category="yfs" PropertyOverride="BASE" PropertyOverrideName="" PropertyValue="us-east"/>
+		</PropertyList>
+	</PropertyMetadata>
+	<PropertyMetadata BasePropertyName="NODE_AVAILABILITY_WIP_BUCKET_NAME" Category="yfs" Description="NODE_AVAILABILITY_WIP_BUCKET_NAME" JvmType="APPSERVER" Modifiable="Y" ModifiableAtRuntime="Y" PropertyType="CUSTOM" Scope="GLOBAL" ServerOverride="N" UserOverride="N">
+		<PropertyList>
+			<Property BasePropertyName="NODE_AVAILABILITY_WIP_BUCKET_NAME" Category="yfs" PropertyOverride="BASE" PropertyOverrideName="" PropertyValue="signet-na-dev-node-availability-wip"/>
+		</PropertyList>
+	</PropertyMetadata>
+	<PropertyMetadata BasePropertyName="yfs.sgt.oms.manage.user.workday.q" Category="yfs" Description="Manage User Queue" JvmType="APPSERVER" Modifiable="Y" ModifiableAtRuntime="Y" PropertyType="CUSTOM" Scope="GLOBAL" ServerOverride="N" UserOverride="N">
+		<PropertyList>
+			<Property BasePropertyName="yfs.sgt.oms.manage.user.workday.q" Category="yfs" PropertyOverride="BASE" PropertyOverrideName="" PropertyValue="Q.OMS.MANAGE.USER.WORKDAY.IN"/>
+		</PropertyList>
+	</PropertyMetadata>
+	<PropertyMetadata BasePropertyName="yfs.sgt.order.details.pos.q" Category="yfs" Description="Order Details" JvmType="APPSERVER" Modifiable="Y" ModifiableAtRuntime="Y" PropertyType="CUSTOM" Scope="GLOBAL" ServerOverride="N" UserOverride="N">
+		<PropertyList>
+			<Property BasePropertyName="yfs.sgt.order.details.pos.q" Category="yfs" PropertyOverride="BASE" PropertyOverrideName="" PropertyValue="Q.OMS.ORDER.DETAILS.POS.OUT"/>
+		</PropertyList>
+	</PropertyMetadata>
+	<PropertyMetadata BasePropertyName="yfs.storefeed.ods.q" Category="yfs" Description="Store Master Feed Queue" JvmType="APPSERVER" Modifiable="Y" ModifiableAtRuntime="Y" PropertyType="CUSTOM" Scope="GLOBAL" ServerOverride="N" UserOverride="N">
+		<PropertyList>
+			<Property BasePropertyName="yfs.storefeed.ods.q" Category="yfs" PropertyOverride="BASE" PropertyOverrideName="" PropertyValue="Q.OMS.STOREFEED.ODS.IN"/>
+		</PropertyList>
+	</PropertyMetadata>
+	<PropertyMetadata BasePropertyName="yfs.schedule.agent.q" Category="yfs" Description="Schedule Agent Queue" JvmType="APPSERVER" Modifiable="Y" ModifiableAtRuntime="Y" PropertyType="CUSTOM" Scope="GLOBAL" ServerOverride="N" UserOverride="N">
+		<PropertyList>
+			<Property BasePropertyName="yfs.schedule.agent.q" Category="yfs" PropertyOverride="BASE" PropertyOverrideName="" PropertyValue="Q.OMS.AGENT.SCHEDULE"/>
+		</PropertyList>
+	</PropertyMetadata>
+	<PropertyMetadata BasePropertyName="yfs.release.agent.q" Category="yfs" Description="Release Agent Queue" JvmType="APPSERVER" Modifiable="Y" ModifiableAtRuntime="Y" PropertyType="CUSTOM" Scope="GLOBAL" ServerOverride="N" UserOverride="N">
+		<PropertyList>
+			<Property BasePropertyName="yfs.release.agent.q" Category="yfs" PropertyOverride="BASE" PropertyOverrideName="" PropertyValue="Q.OMS.AGENT.RELEASE"/>
+		</PropertyList>
+	</PropertyMetadata>
+	<PropertyMetadata BasePropertyName="yfs.sgt.shipnotification.hybris.q" Category="yfs" Description="This Queue is used for Posting Message to Hybris" JvmType="APPSERVER" Modifiable="Y" ModifiableAtRuntime="Y" PropertyType="CUSTOM" Scope="GLOBAL" ServerOverride="N" UserOverride="N">
+		<PropertyList>
+			<Property BasePropertyName="yfs.sgt.shipnotification.hybris.q" Category="yfs" PropertyOverride="BASE" PropertyOverrideName="" PropertyValue="Q.OMS.ORD.SHIPNOTIFICATION.HYBRIS.OUT"/>
+		</PropertyList>
+	</PropertyMetadata>
+	<PropertyMetadata BasePropertyName="yfs.sgt.shipnotification.internal.q" Category="yfs" Description="Queue for Internal Message posting for ShipNotification" JvmType="APPSERVER" Modifiable="Y" ModifiableAtRuntime="Y" PropertyType="CUSTOM" Scope="GLOBAL" ServerOverride="N" UserOverride="N">
+		<PropertyList>
+			<Property BasePropertyName="yfs.sgt.shipnotification.internal.q" Category="yfs" PropertyOverride="BASE" PropertyOverrideName="" PropertyValue="Q.OMS.SHIPNOTIFICATION.INTERNAL"/>
+		</PropertyList>
+	</PropertyMetadata>
+	<PropertyMetadata BasePropertyName="yfs.sgt.hybris.email.notification.q" Category="yfs" Description="Email Reminder Notification" JvmType="APPSERVER" Modifiable="Y" ModifiableAtRuntime="Y" PropertyType="CUSTOM" Scope="GLOBAL" ServerOverride="N" UserOverride="N">
+		<PropertyList>
+			<Property BasePropertyName="yfs.sgt.hybris.email.notification.q" Category="yfs" PropertyOverride="BASE" PropertyOverrideName="" PropertyValue="Q.OMS.HYBRIS.EMAIL.NOTIFICATION.OUT"/>
+		</PropertyList>
+	</PropertyMetadata>
+	<PropertyMetadata BasePropertyName="LABELMAKER_API_VERSION" Category="yfs" Description="api version" JvmType="APPSERVER" Modifiable="Y" ModifiableAtRuntime="Y" PropertyType="CUSTOM" Scope="GLOBAL" ServerOverride="N" UserOverride="N">
+		<PropertyList>
+			<Property BasePropertyName="LABELMAKER_API_VERSION" Category="yfs" PropertyOverride="BASE" PropertyOverrideName="" PropertyValue="1"/>
+		</PropertyList>
+	</PropertyMetadata>
+	<PropertyMetadata BasePropertyName="LABELMAKER_AUTH_URL" Category="yfs" Description="URL for auth from LabelMaker" JvmType="APPSERVER" Modifiable="Y" ModifiableAtRuntime="Y" PropertyType="CUSTOM" Scope="GLOBAL" ServerOverride="N" UserOverride="N">
+		<PropertyList>
+			<Property BasePropertyName="LABELMAKER_AUTH_URL" Category="yfs" PropertyOverride="BASE" PropertyOverrideName="" PropertyValue="https://signet-identity-provider-test.jewels.com/connect/token"/>
+		</PropertyList>
+	</PropertyMetadata>
+	<PropertyMetadata BasePropertyName="LABELMAKER_CLIENT_ID" Category="yfs" Description="client id" JvmType="APPSERVER" Modifiable="Y" ModifiableAtRuntime="Y" PropertyType="CUSTOM" Scope="GLOBAL" ServerOverride="N" UserOverride="N">
+		<PropertyList>
+			<Property BasePropertyName="LABELMAKER_CLIENT_ID" Category="yfs" PropertyOverride="BASE" PropertyOverrideName="" PropertyValue="Hybris.Client"/>
+		</PropertyList>
+	</PropertyMetadata>
+	<PropertyMetadata BasePropertyName="LABELMAKER_CLIENT_SECRET" Category="yfs" Description="client secret" JvmType="APPSERVER" Modifiable="Y" ModifiableAtRuntime="Y" PropertyType="CUSTOM" Scope="GLOBAL" ServerOverride="N" UserOverride="N">
+		<PropertyList>
+			<Property BasePropertyName="LABELMAKER_CLIENT_SECRET" Category="yfs" PropertyOverride="BASE" PropertyOverrideName="" PropertyValue="aWFRKMOlBUAAMJjEtX04JuCUFF5QFvGqDuXfV5gmPHbtC5qUh1uWUvCbbKykebFfNcPEVy0tzuSvDbKQBts5lV"/>
+		</PropertyList>
+	</PropertyMetadata>
+	<PropertyMetadata BasePropertyName="LABELMAKER_GRANT_TYPE" Category="yfs" Description="grant type" JvmType="APPSERVER" Modifiable="Y" ModifiableAtRuntime="Y" PropertyType="CUSTOM" Scope="GLOBAL" ServerOverride="N" UserOverride="N">
+		<PropertyList>
+			<Property BasePropertyName="LABELMAKER_GRANT_TYPE" Category="yfs" PropertyOverride="BASE" PropertyOverrideName="" PropertyValue="client_credentials"/>
+		</PropertyList>
+	</PropertyMetadata>
+	<PropertyMetadata BasePropertyName="LABELMAKER_SHIPMENT_URL" Category="yfs" Description="Get the shipment label details" JvmType="APPSERVER" Modifiable="Y" ModifiableAtRuntime="Y" PropertyType="CUSTOM" Scope="GLOBAL" ServerOverride="N" UserOverride="N">
+		<PropertyList>
+			<Property BasePropertyName="LABELMAKER_SHIPMENT_URL" Category="yfs" PropertyOverride="BASE" PropertyOverrideName="" PropertyValue="https://signetshippingserviceapi-test.jewels.com/api/v1/Shipment/RequestShipment"/>
+		</PropertyList>
+	</PropertyMetadata>
+	<PropertyMetadata BasePropertyName="DG_AVAILABILITY_BUCKET_NAME" Category="yfs" Description="DG_AVAILABILITY_BUCKET_NAME" JvmType="APPSERVER" Modifiable="Y" ModifiableAtRuntime="Y" PropertyType="CUSTOM" Scope="GLOBAL" ServerOverride="N" UserOverride="N">
+		<PropertyList>
+			<Property BasePropertyName="DG_AVAILABILITY_BUCKET_NAME" Category="yfs" PropertyOverride="BASE" PropertyOverrideName="" PropertyValue="signet-na-pre-prod-dg-availability-done" UserComment="signet-na-pre-prod-dg-availability-done"/>
+		</PropertyList>
+	</PropertyMetadata>
+	<PropertyMetadata BasePropertyName="DG_AVAILABILITY_API_KEY" Category="yfs" Description="DG_AVAILABILITY_API_KEY" JvmType="APPSERVER" Modifiable="Y" ModifiableAtRuntime="Y" PropertyType="CUSTOM" Scope="GLOBAL" ServerOverride="N" UserOverride="N">
+		<PropertyList>
+			<Property BasePropertyName="DG_AVAILABILITY_API_KEY" Category="yfs" PropertyOverride="BASE" PropertyOverrideName="" PropertyValue="rZPUqD8c0msoOtegsKa8Q7zrnRyGka_tWpmRhf4F2Idf" UserComment="rZPUqD8c0msoOtegsKa8Q7zrnRyGka_tWpmRhf4F2Idf"/>
+		</PropertyList>
+	</PropertyMetadata>
+	<PropertyMetadata BasePropertyName="DG_AVAILABILITY_WIP_BUCKET_NAME" Category="yfs" Description="DG_AVAILABILITY_WIP_BUCKET_NAME" JvmType="APPSERVER" Modifiable="Y" ModifiableAtRuntime="Y" PropertyType="CUSTOM" Scope="GLOBAL" ServerOverride="N" UserOverride="N">
+		<PropertyList>
+			<Property BasePropertyName="DG_AVAILABILITY_WIP_BUCKET_NAME" Category="yfs" PropertyOverride="BASE" PropertyOverrideName="" PropertyValue="signet-na-dev-dg-availability-wip"/>
+		</PropertyList>
+	</PropertyMetadata>
+	<PropertyMetadata BasePropertyName="DG_AVAILABILITY_WIP_API_KEY" Category="yfs" Description="DG_AVAILABILITY_WIP_API_KEY" JvmType="APPSERVER" Modifiable="Y" ModifiableAtRuntime="Y" PropertyType="CUSTOM" Scope="GLOBAL" ServerOverride="N" UserOverride="N">
+		<PropertyList>
+			<Property BasePropertyName="DG_AVAILABILITY_WIP_API_KEY" Category="yfs" PropertyOverride="BASE" PropertyOverrideName="" PropertyValue="HX3msP_fTclBjjbVoFfQzP_gCB6xcSrJ8fZPdHSxRqyt"/>
+		</PropertyList>
+	</PropertyMetadata>
+	<PropertyMetadata BasePropertyName="DG_AVAILABILITY_DONE_BUCKET_NAME" Category="yfs" Description="DG_AVAILABILITY_DONE_BUCKET_NAME" JvmType="APPSERVER" Modifiable="Y" ModifiableAtRuntime="Y" PropertyType="CUSTOM" Scope="GLOBAL" ServerOverride="N" UserOverride="N">
+		<PropertyList>
+			<Property BasePropertyName="DG_AVAILABILITY_DONE_BUCKET_NAME" Category="yfs" PropertyOverride="BASE" PropertyOverrideName="" PropertyValue="signet-na-pre-prod-dg-availability-backup" UserComment="signet-na-pre-prod-dg-availability-backup"/>
+		</PropertyList>
+	</PropertyMetadata>
+	<PropertyMetadata BasePropertyName="DG_AVAILABILITY_DONE_API_KEY" Category="yfs" Description="DG_AVAILABILITY_DONE_API_KEY" JvmType="APPSERVER" Modifiable="Y" ModifiableAtRuntime="Y" PropertyType="CUSTOM" Scope="GLOBAL" ServerOverride="N" UserOverride="N">
+		<PropertyList>
+			<Property BasePropertyName="DG_AVAILABILITY_DONE_API_KEY" Category="yfs" PropertyOverride="BASE" PropertyOverrideName="" PropertyValue="wqaGzkFuwrI1fLZSjFXkJKqIFjF1moBHz9Utid8YFH-f"/>
+		</PropertyList>
+	</PropertyMetadata>
+	<PropertyMetadata BasePropertyName="DG_AVAILABILITY_ERR_BUCKET_NAME" Category="yfs" Description="DG_AVAILABILITY_ERR_BUCKET_NAME" JvmType="APPSERVER" Modifiable="Y" ModifiableAtRuntime="Y" PropertyType="CUSTOM" Scope="GLOBAL" ServerOverride="N" UserOverride="N">
+		<PropertyList>
+			<Property BasePropertyName="DG_AVAILABILITY_ERR_BUCKET_NAME" Category="yfs" PropertyOverride="BASE" PropertyOverrideName="" PropertyValue="signet-na-dev-dg-availability-err"/>
+		</PropertyList>
+	</PropertyMetadata>
+	<PropertyMetadata BasePropertyName="DG_AVAILABILITY_ERR_API_KEY" Category="yfs" Description="DG_AVAILABILITY_ERR_API_KEY" JvmType="APPSERVER" Modifiable="Y" ModifiableAtRuntime="Y" PropertyType="CUSTOM" Scope="GLOBAL" ServerOverride="N" UserOverride="N">
+		<PropertyList>
+			<Property BasePropertyName="DG_AVAILABILITY_ERR_API_KEY" Category="yfs" PropertyOverride="BASE" PropertyOverrideName="" PropertyValue="2B8FGS14Ptnh4EqZ7JEirA1-GkJ446Ibzz_GzzH5vP9X"/>
+		</PropertyList>
+	</PropertyMetadata>
+	<PropertyMetadata BasePropertyName="SERVICE_INSTANCE_ID_1" Category="yfs" Description="SERVICE_INSTANCE_ID_1" JvmType="APPSERVER" Modifiable="Y" ModifiableAtRuntime="Y" PropertyType="CUSTOM" Scope="GLOBAL" ServerOverride="N" UserOverride="N">
+		<PropertyList>
+			<Property BasePropertyName="SERVICE_INSTANCE_ID_1" Category="yfs" PropertyOverride="BASE" PropertyOverrideName="" PropertyValue="crn:v1:bluemix:public:cloud-object-storage:global:a/e71a5ae072614998a736961ab62d23d3:"/>
+		</PropertyList>
+	</PropertyMetadata>
+	<PropertyMetadata BasePropertyName="SERVICE_INSTANCE_ID_2" Category="yfs" Description="SERVICE_INSTANCE_ID_2" JvmType="APPSERVER" Modifiable="Y" ModifiableAtRuntime="Y" PropertyType="CUSTOM" Scope="GLOBAL" ServerOverride="N" UserOverride="N">
+		<PropertyList>
+			<Property BasePropertyName="SERVICE_INSTANCE_ID_2" Category="yfs" PropertyOverride="BASE" PropertyOverrideName="" PropertyValue="ae4e5e19-4de6-425c-b0c0-aa4bfa34f7a1::"/>
+		</PropertyList>
+	</PropertyMetadata>
+	<PropertyMetadata BasePropertyName="SERVICE_END_POINT_URL" Category="yfs" Description="SERVICE_END_POINT_URL" JvmType="APPSERVER" Modifiable="Y" ModifiableAtRuntime="Y" PropertyType="CUSTOM" Scope="GLOBAL" ServerOverride="N" UserOverride="N">
+		<PropertyList>
+			<Property BasePropertyName="SERVICE_END_POINT_URL" Category="yfs" PropertyOverride="BASE" PropertyOverrideName="" PropertyValue="https://s3.us-east.cloud-object-storage.appdomain.cloud"/>
+		</PropertyList>
+	</PropertyMetadata>
+	<PropertyMetadata BasePropertyName="yfs.sgt.invsyn.internal.q" Category="yfs" Description="IV Inventory Refresh Call" JvmType="APPSERVER" Modifiable="Y" ModifiableAtRuntime="Y" PropertyType="CUSTOM" Scope="GLOBAL" ServerOverride="N" UserOverride="N">
+		<PropertyList>
+			<Property BasePropertyName="yfs.sgt.invsyn.internal.q" Category="yfs" PropertyOverride="BASE" PropertyOverrideName="" PropertyValue="Q.OMS.IV.INV.REFRESH"/>
+		</PropertyList>
+	</PropertyMetadata>
+	<PropertyMetadata BasePropertyName="yfs.sgt.madmobile.sms.internal.q" Category="yfs" Description="Mad mobile SMS Queue" JvmType="APPSERVER" Modifiable="Y" ModifiableAtRuntime="Y" PropertyType="CUSTOM" Scope="GLOBAL" ServerOverride="N" UserOverride="N">
+		<PropertyList>
+			<Property BasePropertyName="yfs.sgt.madmobile.sms.internal.q" Category="yfs" PropertyOverride="BASE" PropertyOverrideName="" PropertyValue="Q.OMS.MADMOBILE.SMS.INTERNAL"/>
+		</PropertyList>
+	</PropertyMetadata>
+	<PropertyMetadata BasePropertyName="yfs.sgt.dos.readyforcustomer.internal.q" Category="yfs" Description="DOS Ready for Customer internal Queue" JvmType="APPSERVER" Modifiable="Y" ModifiableAtRuntime="Y" PropertyType="CUSTOM" Scope="GLOBAL" ServerOverride="N" UserOverride="N">
+		<PropertyList>
+			<Property BasePropertyName="yfs.sgt.dos.readyforcustomer.internal.q" Category="yfs" PropertyOverride="BASE" PropertyOverrideName="" PropertyValue="Q.OMS.DOS.READYFORCUSTOMER.INTERNAL"/>
+		</PropertyList>
+	</PropertyMetadata>
+	<PropertyMetadata BasePropertyName="yfs.curbside.calendar.q" Category="yfs" Description="curbside create or change calendar Queue" JvmType="APPSERVER" Modifiable="Y" ModifiableAtRuntime="Y" PropertyType="CUSTOM" Scope="GLOBAL" ServerOverride="N" UserOverride="N">
+		<PropertyList>
+			<Property BasePropertyName="yfs.curbside.calendar.q" Category="yfs" PropertyOverride="BASE" PropertyOverrideName="" PropertyValue="Q.OMS.CURBSIDE.CALENDAR.IN"/>
+		</PropertyList>
+	</PropertyMetadata>
+	<PropertyMetadata BasePropertyName="yfs.sgt.backroompick.internal.q" Category="yfs" Description="Queue for Internal Message for BOPIS Orders during confirm shipment process" JvmType="APPSERVER" Modifiable="Y" ModifiableAtRuntime="Y" PropertyType="CUSTOM" Scope="GLOBAL" ServerOverride="N" UserOverride="N">
+		<PropertyList>
+			<Property BasePropertyName="yfs.sgt.backroompick.internal.q" Category="yfs" PropertyOverride="BASE" PropertyOverrideName="" PropertyValue="Q.OMS.BACKROOM.PICK.INTERNAL"/>
+		</PropertyList>
+	</PropertyMetadata>
+	<PropertyMetadata BasePropertyName="DOS_URL" Category="yfs" Description="DOS_URL" JvmType="APPSERVER" Modifiable="Y" ModifiableAtRuntime="Y" PropertyType="CUSTOM" Scope="GLOBAL" ServerOverride="N" UserOverride="N">
+		<PropertyList>
+			<Property BasePropertyName="DOS_URL" Category="yfs" PropertyOverride="BASE" PropertyOverrideName="" PropertyValue="https://signet-test.nextuple.com/v1/integrations/order-events/ready-for-pickup"/>
+		</PropertyList>
+	</PropertyMetadata>
+	<PropertyMetadata BasePropertyName="DOS_API_KEY" Category="yfs" Description="DOS_API_KEY" JvmType="APPSERVER" Modifiable="Y" ModifiableAtRuntime="Y" PropertyType="CUSTOM" Scope="GLOBAL" ServerOverride="N" UserOverride="N">
+		<PropertyList>
+			<Property BasePropertyName="DOS_API_KEY" Category="yfs" PropertyOverride="BASE" PropertyOverrideName="" PropertyValue="1391a9649ace6186d3e03c0549d9cd286dd52d8bd32d7c87e7678a1c695c2704"/>
+		</PropertyList>
+	</PropertyMetadata>
+	<PropertyMetadata BasePropertyName="NODE_AVAILABILITY_API_KEY" Category="yfs" Description="NODE_AVAILABILITY_API_KEY" JvmType="APPSERVER" Modifiable="Y" ModifiableAtRuntime="Y" PropertyType="CUSTOM" Scope="GLOBAL" ServerOverride="N" UserOverride="N">
+		<PropertyList>
+			<Property BasePropertyName="NODE_AVAILABILITY_API_KEY" Category="yfs" PropertyOverride="BASE" PropertyOverrideName="" PropertyValue="iiEA1xjhFYwUi41bsWtbHu94avbAStJwrO0bnyrrQX5S"/>
+		</PropertyList>
+	</PropertyMetadata>
+	<PropertyMetadata BasePropertyName="MMNewOrderRestAPIURL" Category="yfs" Description="Mad Mobile New Order Rest APi URL" JvmType="APPSERVER" Modifiable="Y" ModifiableAtRuntime="Y" PropertyType="CUSTOM" Scope="GLOBAL" ServerOverride="N" UserOverride="N">
+		<PropertyList>
+			<Property BasePropertyName="MMNewOrderRestAPIURL" Category="yfs" PropertyOverride="BASE" PropertyOverrideName="" PropertyValue="https://4qplpozgye.execute-api.us-east-2.amazonaws.com/signet-webhook-fulfillment"/>
+		</PropertyList>
+	</PropertyMetadata>
+	<PropertyMetadata BasePropertyName="FlagForBearerToken" Category="yfs" Description="Flag for Mad Mobile Bearer Token" JvmType="APPSERVER" Modifiable="Y" ModifiableAtRuntime="Y" PropertyType="CUSTOM" Scope="GLOBAL" ServerOverride="N" UserOverride="N">
+		<PropertyList>
+			<Property BasePropertyName="FlagForBearerToken" Category="yfs" PropertyOverride="BASE" PropertyOverrideName="" PropertyValue="Y"/>
+		</PropertyList>
+	</PropertyMetadata>
+	<PropertyMetadata BasePropertyName="ActionForSaveTheSale" Category="yfs" Description="Action For Save the Sale" JvmType="APPSERVER" Modifiable="Y" ModifiableAtRuntime="Y" PropertyType="CUSTOM" Scope="GLOBAL" ServerOverride="N" UserOverride="N">
+		<PropertyList>
+			<Property BasePropertyName="ActionForSaveTheSale" Category="yfs" PropertyOverride="BASE" PropertyOverrideName="" PropertyValue="SLA_NOTICE"/>
+		</PropertyList>
+	</PropertyMetadata>
+	<PropertyMetadata BasePropertyName="ActionForNewOrder" Category="yfs" Description="Action For New Order" JvmType="APPSERVER" Modifiable="Y" ModifiableAtRuntime="Y" PropertyType="CUSTOM" Scope="GLOBAL" ServerOverride="N" UserOverride="N">
+		<PropertyList>
+			<Property BasePropertyName="ActionForNewOrder" Category="yfs" PropertyOverride="BASE" PropertyOverrideName="" PropertyValue="NEW_ORDER_NOTICE"/>
+		</PropertyList>
+	</PropertyMetadata>
+	<PropertyMetadata BasePropertyName="DG_SYNC_DELAY_IN_SEC" Category="yfs" Description="DG_SYNC_DELAY_IN_SEC" JvmType="APPSERVER" Modifiable="Y" ModifiableAtRuntime="Y" PropertyType="CUSTOM" Scope="GLOBAL" ServerOverride="N" UserOverride="N">
+		<PropertyList>
+			<Property BasePropertyName="DG_SYNC_DELAY_IN_SEC" Category="yfs" PropertyOverride="BASE" PropertyOverrideName="" PropertyValue="600"/>
+		</PropertyList>
+	</PropertyMetadata>
+	<PropertyMetadata BasePropertyName="package_width" Category="yfs" Description="The package width attribute setup in DOM for Ready For Customer message to DOS" JvmType="APPSERVER" Modifiable="Y" ModifiableAtRuntime="Y" PropertyType="CUSTOM" Scope="GLOBAL" ServerOverride="N" UserOverride="N">
+		<PropertyList>
+			<Property BasePropertyName="package_width" Category="yfs" PropertyOverride="BASE" PropertyOverrideName="" PropertyValue="10"/>
+		</PropertyList>
+	</PropertyMetadata>
+	<PropertyMetadata BasePropertyName="package_height" Category="yfs" Description="The package height attribute setup in DOM for Ready For Customer message to DOS" JvmType="APPSERVER" Modifiable="Y" ModifiableAtRuntime="Y" PropertyType="CUSTOM" Scope="GLOBAL" ServerOverride="N" UserOverride="N">
+		<PropertyList>
+			<Property BasePropertyName="package_height" Category="yfs" PropertyOverride="BASE" PropertyOverrideName="" PropertyValue="10"/>
+		</PropertyList>
+	</PropertyMetadata>
+	<PropertyMetadata BasePropertyName="package_length" Category="yfs" Description="The package length attribute setup in DOM for Ready For Customer message to DOS" JvmType="APPSERVER" Modifiable="Y" ModifiableAtRuntime="Y" PropertyType="CUSTOM" Scope="GLOBAL" ServerOverride="N" UserOverride="N">
+		<PropertyList>
+			<Property BasePropertyName="package_length" Category="yfs" PropertyOverride="BASE" PropertyOverrideName="" PropertyValue="10"/>
+		</PropertyList>
+	</PropertyMetadata>
+	<PropertyMetadata BasePropertyName="package_weight" Category="yfs" Description="The package weight attribute setup in DOM for Ready For Customer message to DOS" JvmType="APPSERVER" Modifiable="Y" ModifiableAtRuntime="Y" PropertyType="CUSTOM" Scope="GLOBAL" ServerOverride="N" UserOverride="N">
+		<PropertyList>
+			<Property BasePropertyName="package_weight" Category="yfs" PropertyOverride="BASE" PropertyOverrideName="" PropertyValue="10"/>
+		</PropertyList>
+	</PropertyMetadata>
+	<PropertyMetadata BasePropertyName="ActionForReadyForPickUp" Category="yfs" Description="Action For Ready For Pickup" JvmType="APPSERVER" Modifiable="Y" ModifiableAtRuntime="Y" PropertyType="CUSTOM" Scope="GLOBAL" ServerOverride="N" UserOverride="N">
+		<PropertyList>
+			<Property BasePropertyName="ActionForReadyForPickUp" Category="yfs" PropertyOverride="BASE" PropertyOverrideName="" PropertyValue="READY_FOR_PICKUP_NOTICE"/>
+		</PropertyList>
+	</PropertyMetadata>
+	<PropertyMetadata BasePropertyName="ActionForPickupCompleted" Category="yfs" Description="Action For Pickup Completed" JvmType="APPSERVER" Modifiable="Y" ModifiableAtRuntime="Y" PropertyType="CUSTOM" Scope="GLOBAL" ServerOverride="N" UserOverride="N">
+		<PropertyList>
+			<Property BasePropertyName="ActionForPickupCompleted" Category="yfs" PropertyOverride="BASE" PropertyOverrideName="" PropertyValue="COMPLETED_NOTICE"/>
+		</PropertyList>
+	</PropertyMetadata>
+	<PropertyMetadata BasePropertyName="package_value_threshold" Category="yfs" Description="package_value_threshold" JvmType="APPSERVER" Modifiable="Y" ModifiableAtRuntime="Y" PropertyType="CUSTOM" Scope="GLOBAL" ServerOverride="N" UserOverride="N">
+		<PropertyList>
+			<Property BasePropertyName="package_value_threshold" Category="yfs" PropertyOverride="BASE" PropertyOverrideName="" PropertyValue="1000"/>
+		</PropertyList>
+	</PropertyMetadata>
+	<PropertyMetadata BasePropertyName="ActionForDeliveryCancellation" Category="yfs" Description="ActionForDeliveryCancellation" JvmType="APPSERVER" Modifiable="Y" ModifiableAtRuntime="Y" PropertyType="CUSTOM" Scope="GLOBAL" ServerOverride="N" UserOverride="N">
+		<PropertyList>
+			<Property BasePropertyName="ActionForDeliveryCancellation" Category="yfs" PropertyOverride="BASE" PropertyOverrideName="" PropertyValue="SDD_DELIVERY_EXCEPTION_NOTICE"/>
+		</PropertyList>
+	</PropertyMetadata>
+	<PropertyMetadata BasePropertyName="yfs.recon.order.hybris.in.q" Category="yfs" Description="Order Reconciliation Inbound Queue" JvmType="APPSERVER" Modifiable="Y" ModifiableAtRuntime="Y" PropertyType="CUSTOM" Scope="GLOBAL" ServerOverride="N" UserOverride="N">
+		<PropertyList>
+			<Property BasePropertyName="yfs.recon.order.hybris.in.q" Category="yfs" PropertyOverride="BASE" PropertyOverrideName="" PropertyValue="Q.OMS.ORD.RECONCILE.HYBRIS.IN"/>
+		</PropertyList>
+	</PropertyMetadata>
+	<PropertyMetadata BasePropertyName="yfs.recon.order.hybris.out.q" Category="yfs" Description="Order Reconciliation Outbound Queue" JvmType="APPSERVER" Modifiable="Y" ModifiableAtRuntime="Y" PropertyType="CUSTOM" Scope="GLOBAL" ServerOverride="N" UserOverride="N">
+		<PropertyList>
+			<Property BasePropertyName="yfs.recon.order.hybris.out.q" Category="yfs" PropertyOverride="BASE" PropertyOverrideName="" PropertyValue="Q.OMS.ORD.RECONCILE.HYBRIS.OUT"/>
+		</PropertyList>
+	</PropertyMetadata>
+	<PropertyMetadata BasePropertyName="SOMS_LAYAWAY_URL" Category="yfs" Description="SOMS_LAYAWAY_URL" JvmType="APPSERVER" Modifiable="Y" ModifiableAtRuntime="Y" PropertyType="CUSTOM" Scope="GLOBAL" ServerOverride="N" UserOverride="N">
+		<PropertyList>
+			<Property BasePropertyName="SOMS_LAYAWAY_URL" Category="yfs" PropertyOverride="BASE" PropertyOverrideName="" PropertyValue="https://ecomesbapi-uat5.signetomni.com/services/fulfillment/layaway/v1.0"/>
+		</PropertyList>
+	</PropertyMetadata>
+	<PropertyMetadata BasePropertyName="SOMS_TRANSFER_URL" Category="yfs" Description="SOMS_TRANSFER_URL" JvmType="APPSERVER" Modifiable="Y" ModifiableAtRuntime="Y" PropertyType="CUSTOM" Scope="GLOBAL" ServerOverride="N" UserOverride="N">
+		<PropertyList>
+			<Property BasePropertyName="SOMS_TRANSFER_URL" Category="yfs" PropertyOverride="BASE" PropertyOverrideName="" PropertyValue="https://ecomesbapi-uat5.signetomni.com/services/fulfillment/transfernumber/v1.0"/>
+		</PropertyList>
+	</PropertyMetadata>
+	<PropertyMetadata BasePropertyName="SOMS_TRANSFER_HOST_NAME" Category="yfs" Description="SOMS_TRANSFER_HOST_NAME" JvmType="APPSERVER" Modifiable="Y" ModifiableAtRuntime="Y" PropertyType="CUSTOM" Scope="GLOBAL" ServerOverride="N" UserOverride="N">
+		<PropertyList>
+			<Property BasePropertyName="SOMS_TRANSFER_HOST_NAME" Category="yfs" PropertyOverride="BASE" PropertyOverrideName="" PropertyValue="sgnet-qa-2.oms.supply-chain.ibm.com"/>
+		</PropertyList>
+	</PropertyMetadata>
+	<PropertyMetadata BasePropertyName="SOMS_TRANSFER_IP_ADDRESS" Category="yfs" Description="SOMS_TRANSFER_IP_ADDRESS" JvmType="APPSERVER" Modifiable="Y" ModifiableAtRuntime="Y" PropertyType="CUSTOM" Scope="GLOBAL" ServerOverride="N" UserOverride="N">
+		<PropertyList>
+			<Property BasePropertyName="SOMS_TRANSFER_IP_ADDRESS" Category="yfs" PropertyOverride="BASE" PropertyOverrideName="" PropertyValue="169.63.64.84"/>
+		</PropertyList>
+	</PropertyMetadata>
+	<PropertyMetadata BasePropertyName="SOMS_LAYAWAY_HOST_NAME" Category="yfs" Description="SOMS_LAYAWAY_HOST_NAME" JvmType="APPSERVER" Modifiable="Y" ModifiableAtRuntime="Y" PropertyType="CUSTOM" Scope="GLOBAL" ServerOverride="N" UserOverride="N">
+		<PropertyList>
+			<Property BasePropertyName="SOMS_LAYAWAY_HOST_NAME" Category="yfs" PropertyOverride="BASE" PropertyOverrideName="" PropertyValue="996482"/>
+		</PropertyList>
+	</PropertyMetadata>
+	<PropertyMetadata BasePropertyName="SOMS_LAYAWAY_IP_ADDRESS" Category="yfs" Description="SOMS_LAYAWAY_IP_ADDRESS" JvmType="APPSERVER" Modifiable="Y" ModifiableAtRuntime="Y" PropertyType="CUSTOM" Scope="GLOBAL" ServerOverride="N" UserOverride="N">
+		<PropertyList>
+			<Property BasePropertyName="SOMS_LAYAWAY_IP_ADDRESS" Category="yfs" PropertyOverride="BASE" PropertyOverrideName="" PropertyValue="10.6.40.188"/>
+		</PropertyList>
+	</PropertyMetadata>
+	<PropertyMetadata BasePropertyName="yfs.sgt.transferlayawayno.agent.q" Category="yfs" Description="yfs.sgt.transferlayawayno.agent.q" JvmType="APPSERVER" Modifiable="Y" ModifiableAtRuntime="Y" PropertyType="CUSTOM" Scope="GLOBAL" ServerOverride="N" UserOverride="N">
+		<PropertyList>
+			<Property BasePropertyName="yfs.sgt.transferlayawayno.agent.q" Category="yfs" PropertyOverride="BASE" PropertyOverrideName="" PropertyValue="Q.OMS.GENERATE.TRANSFERLAYAWAYNO"/>
+		</PropertyList>
+	</PropertyMetadata>
+	<PropertyMetadata BasePropertyName="yfs.sgt.changeorderoncancel.internal.q" Category="yfs" Description="yfs.sgt.changeorderoncancel.internal.q" JvmType="APPSERVER" Modifiable="Y" ModifiableAtRuntime="Y" PropertyType="CUSTOM" Scope="GLOBAL" ServerOverride="N" UserOverride="N">
+		<PropertyList>
+			<Property BasePropertyName="yfs.sgt.changeorderoncancel.internal.q" Category="yfs" PropertyOverride="BASE" PropertyOverrideName="" PropertyValue="Q.OMS.CHANGEORDERONCANCEL.INTERNAL"/>
+		</PropertyList>
+	</PropertyMetadata>
+	<PropertyMetadata BasePropertyName="yfs.sgt.export.purge.q" Category="yfs" Description="yfs.sgt.export.purge.q" JvmType="APPSERVER" Modifiable="Y" ModifiableAtRuntime="Y" PropertyType="CUSTOM" Scope="GLOBAL" ServerOverride="N" UserOverride="N">
+		<PropertyList>
+			<Property BasePropertyName="yfs.sgt.export.purge.q" Category="yfs" PropertyOverride="BASE" PropertyOverrideName="" PropertyValue="Q.OMS.EXPORT.PURGE"/>
+		</PropertyList>
+	</PropertyMetadata>
+	<PropertyMetadata BasePropertyName="FLAG_FOR_BEARER_TOKEN" Category="yfs" Description="FLAG_FOR_BEARER_TOKEN" JvmType="APPSERVER" Modifiable="Y" ModifiableAtRuntime="Y" PropertyType="CUSTOM" Scope="GLOBAL" ServerOverride="N" UserOverride="N">
+		<PropertyList>
+			<Property BasePropertyName="FLAG_FOR_BEARER_TOKEN" Category="yfs" PropertyOverride="BASE" PropertyOverrideName="" PropertyValue="Y"/>
+		</PropertyList>
+	</PropertyMetadata>
+	<PropertyMetadata BasePropertyName="SALES_SLIP_CUTOVER_DATE" Category="yfs" Description="SALES_SLIP_CUTOVER_DATE" JvmType="APPSERVER" Modifiable="Y" ModifiableAtRuntime="Y" PropertyType="CUSTOM" Scope="GLOBAL" ServerOverride="N" UserOverride="N">
+		<PropertyList>
+			<Property BasePropertyName="SALES_SLIP_CUTOVER_DATE" Category="yfs" PropertyOverride="BASE" PropertyOverrideName="" PropertyValue="2021-03-21 00:00"/>
+		</PropertyList>
+	</PropertyMetadata>
+	<PropertyMetadata BasePropertyName="yfs.recon.scn.agent.internal.q" Category="yfs" Description="SCN Reconciliation Agent Internal Queue" JvmType="APPSERVER" Modifiable="Y" ModifiableAtRuntime="Y" PropertyType="CUSTOM" Scope="GLOBAL" ServerOverride="N" UserOverride="N">
+		<PropertyList>
+			<Property BasePropertyName="yfs.recon.scn.agent.internal.q" Category="yfs" PropertyOverride="BASE" PropertyOverrideName="" PropertyValue="Q.OMS.AGENT.SCN.RECONCILE"/>
+		</PropertyList>
+	</PropertyMetadata>
+	<PropertyMetadata BasePropertyName="yfs.recon.scn.integ.internal.q" Category="yfs" Description="Q.OMS.SCN.RECONCILE.INTERNAL" JvmType="APPSERVER" Modifiable="Y" ModifiableAtRuntime="Y" PropertyType="CUSTOM" Scope="GLOBAL" ServerOverride="N" UserOverride="N">
+		<PropertyList>
+			<Property BasePropertyName="yfs.recon.scn.integ.internal.q" Category="yfs" PropertyOverride="BASE" PropertyOverrideName="" PropertyValue="Q.OMS.SCN.RECONCILE.INTERNAL"/>
+		</PropertyList>
+	</PropertyMetadata>
+	<PropertyMetadata BasePropertyName="yfs.recon.scn.hybris.out.q" Category="yfs" Description="SCN Reconciliation Outbound Queue" JvmType="APPSERVER" Modifiable="Y" ModifiableAtRuntime="Y" PropertyType="CUSTOM" Scope="GLOBAL" ServerOverride="N" UserOverride="N">
+		<PropertyList>
+			<Property BasePropertyName="yfs.recon.scn.hybris.out.q" Category="yfs" PropertyOverride="BASE" PropertyOverrideName="" PropertyValue="Q.OMS.SCN.RECONCILE.HYBRIS.OUT"/>
+		</PropertyList>
+	</PropertyMetadata>
+</PropertyMetadataList>
