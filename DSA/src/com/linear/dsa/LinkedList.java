@@ -91,7 +91,7 @@ public class LinkedList {
 		}
 	}
 
-	public void delete() {
+	public void delete() { // delete the first element of the list
 		if(head==null) {
 			System.out.println("List is empty.....");
 		}
@@ -100,7 +100,7 @@ public class LinkedList {
 		}
 	}
 
-	public void deleteLast() {
+	public void deleteLast() { // delete the last element of the list
 		if(head==null) {
 			System.out.println("List is empty.....");
 		}else {
@@ -114,7 +114,7 @@ public class LinkedList {
 		}
 	}
 
-	public void deleteMiddle(int index) {
+	public void deleteMiddle(int index) { // delete the element from list of the particular index
 		if(index<0 || index>=size()) {
 			System.out.println("Invalid index........");
 		}else if(index==0) {
@@ -143,8 +143,8 @@ public class LinkedList {
 		list.insertFirst(10);
 		list.insertMiddle(4, 244);
 		list.display();
-//		list.delete();
-//		list.deleteLast();
+		list.delete();
+		list.deleteLast();
 		list.deleteMiddle(2);
 		list.display();
 		System.out.println("Size of list: "+list.size());
