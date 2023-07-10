@@ -1,6 +1,6 @@
 package com.linear.dsa;
 
-class Node{
+class Node{  
 	int value;
 	Node next;
 
@@ -17,7 +17,7 @@ public class LinkedList {
 		this.head=null;
 	}
 
-	public void insert(int value) {
+	public void insert(int value) { // insert the element to list (by default from last)
 		Node newNode = new Node(value);
 
 		if(head == null) {
@@ -33,15 +33,15 @@ public class LinkedList {
 			temp.next = newNode;
 		}
 	}
-	
-	public void insertFirst(int value) {
+
+	public void insertFirst(int value) { // insert the element from the beginning of the list
 		Node newNode = new Node(value);
-		
+
 		newNode.next=head;
 		head=newNode;
 	}
-	
-	public void display() {
+
+	public void display() { // display the list
 		if(head==null) {
 			System.out.println("List is empty!!!!");
 		}else {
@@ -53,8 +53,8 @@ public class LinkedList {
 			System.out.println();
 		}
 	}
-	
-	public int size() {
+
+	public int size() { // return the length of list
 		int count =0;
 		if(head == null) {
 			return count;
@@ -67,8 +67,8 @@ public class LinkedList {
 			return count;
 		}
 	}
-	
-	public void insertMiddle(int index,int value) {
+
+	public void insertMiddle(int index,int value) { // insert the element to the list to particular index
 		if(index>size() || index<0) {
 			System.out.println("Invalid Index....");
 		}
@@ -90,6 +90,50 @@ public class LinkedList {
 			temp.next=newNode;
 		}
 	}
+
+	public void delete() {
+		if(head==null) {
+			System.out.println("List is empty.....");
+		}
+		else {
+			head=head.next;
+		}
+	}
+
+	public void deleteLast() {
+		if(head==null) {
+			System.out.println("List is empty.....");
+		}else {
+			Node temp=head;
+			while(temp!=null) {
+				if(temp.next.next==null) {
+					temp.next=null;
+				}
+				temp=temp.next;
+			}
+		}
+	}
+
+	public void deleteMiddle(int index) {
+		if(index<0 || index>=size()) {
+			System.out.println("Invalid index........");
+		}else if(index==0) {
+			delete();
+		}else if(index==size()-1) {
+			deleteLast();
+		}else {
+			int count = 0;
+			Node temp = head.next;
+			Node prev = head;
+			while(count<index-1) {
+				prev=temp;
+				temp=temp.next;
+				count++;
+			}
+			prev.next=temp.next;
+		}
+	}
+
 	public static void main(String[] args) {
 		LinkedList list = new LinkedList();
 		list.insert(12);
@@ -98,6 +142,10 @@ public class LinkedList {
 		list.insert(14);
 		list.insertFirst(10);
 		list.insertMiddle(4, 244);
+		list.display();
+//		list.delete();
+//		list.deleteLast();
+		list.deleteMiddle(2);
 		list.display();
 		System.out.println("Size of list: "+list.size());
 	}
