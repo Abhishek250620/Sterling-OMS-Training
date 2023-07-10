@@ -34,6 +34,13 @@ public class LinkedList {
 		}
 	}
 	
+	public void insertFirst(int value) {
+		Node newNode = new Node(value);
+		
+		newNode.next=head;
+		head=newNode;
+	}
+	
 	public void display() {
 		if(head==null) {
 			System.out.println("List is empty!!!!");
@@ -43,6 +50,7 @@ public class LinkedList {
 				System.out.print(temp.value+" ");
 				temp=temp.next;
 			}
+			System.out.println();
 		}
 	}
 	public static void main(String[] args) {
@@ -51,6 +59,8 @@ public class LinkedList {
 		list.insert(23);
 		list.insert(13);
 		list.insert(14);
+		list.display();
+		list.insertFirst(10);
 		list.display();
 	}
 }
