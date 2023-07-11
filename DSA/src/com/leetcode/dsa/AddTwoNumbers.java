@@ -1,6 +1,5 @@
 package com.leetcode.dsa;
 
-
  class ListNode {
       int val;
       ListNode next;
