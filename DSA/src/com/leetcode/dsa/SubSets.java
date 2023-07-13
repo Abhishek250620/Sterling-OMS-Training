@@ -7,13 +7,14 @@ public class SubSets {
 			System.out.println(sub);
 			return;
 		}
-		char ch=str.charAt(0);
-		subSet(str.substring(1),sub);
+		
+		char ch = str.charAt(0);
 		subSet(str.substring(1),sub+ch);
+		subSet(str.substring(1),sub);
 	}
 	
 	public static void main(String[] args) {
-		String str="abcdfg";
+		String str="abc";
 		subSet(str,"");
 	}
 }
