@@ -42,6 +42,7 @@ public class ExcelToXml {
 		Element root = doc.createElement("MultiApi");
 		doc.appendChild(root);
 		Map<String,String> properties= readXlsx(filePath);
+//		System.out.println(properties);
 
 		Set<String> keySet = properties.keySet();
 		for(String key:keySet) {
@@ -84,6 +85,7 @@ public class ExcelToXml {
 		Sheet sheet = workbook.getSheetAt(0); 
 
 		int lastRowNum = sheet.getLastRowNum();
+//		System.out.println(lastRowNum);
 		Map<String,String> property = new LinkedHashMap<String,String>();
 		for (int i = 1; i <= lastRowNum; i++) {
 			Row row = sheet.getRow(i);

@@ -26,6 +26,10 @@ public class RemoveAInString {
 			return ch+removeA(str.substring(1));
 		}
 	}
+	
+	static int demo(String str) {
+		return (int)Integer.parseInt(str);
+	}
 	public static void main(String[] args) {
 		String str = "baccab";
 		System.out.println(removeA(str,""));

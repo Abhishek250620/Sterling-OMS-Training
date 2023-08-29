@@ -29,6 +29,6 @@ public class DeciToBin {
 
 	public static void main(String[] args) {
 		System.out.println(decToBin(7));
-		System.out.println(binToDec(111l));
+		System.out.println(binToDec(1001l));
 	}
 }
